@@ -16,9 +16,9 @@ import "./Interfaces/IBoldToken.sol";
  * 2) sendToPool() and returnFromPool(): functions callable only Liquity core contracts, which move Bold tokens between Liquity <-> user.
  */
 
-contract BoldToken is Ownable, IBoldToken, ERC20Permit {
-    string internal constant _NAME = "Bold Stablecoin";
-    string internal constant _SYMBOL = "Bold";
+contract NeriteToken is Ownable, IBoldToken, ERC20Permit {
+    string internal constant _NAME = "Nerite Stablecoin";
+    string internal constant _SYMBOL = "USDN";
 
     // --- Addresses ---
 
