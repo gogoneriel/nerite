@@ -17,17 +17,17 @@ import "./Dependencies/Ownable.sol";
 // import "forge-std/console2.sol";
 
 /*
- * The Stability Pool holds Bold tokens deposited by Stability Pool depositors.
+ * The Stability Pool holds USDN tokens deposited by Stability Pool depositors.
  *
- * When a trove is liquidated, then depending on system conditions, some of its Bold debt gets offset with
- * Bold in the Stability Pool:  that is, the offset debt evaporates, and an equal amount of Bold tokens in the Stability Pool is burned.
+ * When a trove is liquidated, then depending on system conditions, some of its USDN debt gets offset with
+ * USDN in the Stability Pool:  that is, the offset debt evaporates, and an equal amount of USDN tokens in the Stability Pool is burned.
  *
- * Thus, a liquidation causes each depositor to receive a Bold loss, in proportion to their deposit as a share of total deposits.
- * They also receive an Coll gain, as the collateral of the liquidated trove is distributed among Stability depositors,
+ * Thus, a liquidation causes each depositor to receive a USDN loss, in proportion to their deposit as a share of total deposits.
+ * They also receive a Coll (collateral) gain, as the collateral of the liquidated trove is distributed among Stability depositors,
  * in the same proportion.
  *
  * When a liquidation occurs, it depletes every deposit by the same fraction: for example, a liquidation that depletes 40%
- * of the total Bold in the Stability Pool, depletes 40% of each deposit.
+ * of the total USDN in the Stability Pool, depletes 40% of each deposit.
  *
  * A deposit that has experienced a series of liquidations is termed a "compounded deposit": each liquidation depletes the deposit,
  * multiplying it by some factor in range ]0,1[
